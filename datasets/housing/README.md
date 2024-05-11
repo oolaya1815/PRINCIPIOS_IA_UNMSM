@@ -1,19 +1,19 @@
-# California Housing
+# Vivienda en California
 
-## Source
-This dataset is a modified version of the California Housing dataset available from [Luís Torgo's page](http://www.dcc.fc.up.pt/~ltorgo/Regression/cal_housing.html) (University of Porto). Luís Torgo obtained it from the StatLib repository (which is closed now). The dataset may also be downloaded from StatLib mirrors.
+## Fuente
+Este conjunto de datos es una versión modificada del conjunto de datos de Vivienda en California disponible en la página de Luís Torgo (Universidad de Oporto). Luís Torgo lo obtuvo del repositorio StatLib (que ahora está cerrado). El conjunto de datos también se puede descargar de los espejos de StatLib.
 
-This dataset appeared in a 1997 paper titled *Sparse Spatial Autoregressions* by Pace, R. Kelley and Ronald Barry, published in the *Statistics and Probability Letters* journal. They built it using the 1990 California census data. It contains one row per census block group. A block group is the smallest geographical unit for which the U.S. Census Bureau publishes sample data (a block group typically has a population of 600 to 3,000 people).
+Este conjunto de datos apareció en un artículo de 1997 titulado *Sparse Spatial Autoregressions* por Pace, R. Kelley y Ronald Barry, publicado en la revista *Statistics and Probability Letters*. Lo construyeron utilizando los datos del censo de California de 1990. Contiene una fila por grupo de bloques del censo. Un grupo de bloques es la unidad geográfica más pequeña para la cual la Oficina del Censo de los EE. UU. publica datos de muestra (un grupo de bloques típicamente tiene una población de 600 a 3,000 personas).
 
-## Tweaks
-The dataset in this directory is almost identical to the original, with two differences:
+## Modificaciones
+El conjunto de datos en este directorio es casi idéntico al original, con dos diferencias:
 
-* 207 values were randomly removed from the `total_bedrooms` column, so we can discuss what to do with missing data.
-* An additional categorical attribute called `ocean_proximity` was added, indicating (very roughly) whether each block group is near the ocean, near the Bay area, inland or on an island. This allows discussing what to do with categorical data.
+* Se eliminaron aleatoriamente 207 valores de la columna `total_bedrooms`, para que podamos discutir qué hacer con los datos faltantes.
+* Se agregó un atributo categórico adicional llamado `ocean_proximity`, que indica (muy aproximadamente) si cada grupo de bloques está cerca del océano, cerca del área de la Bahía, en el interior o en una isla. Esto permite discutir qué hacer con los datos categóricos.
 
-Note that the block groups are called "districts" in the Jupyter notebooks, simply because in some contexts the name "block group" was confusing.
+Tenga en cuenta que los grupos de bloques se llaman "distritos" en los cuadernos Jupyter, simplemente porque en algunos contextos el nombre "grupo de bloques" era confuso.
 
-## Data description
+## Descripción de los datos
 
     >>> housing.info()
     <class 'pandas.core.frame.DataFrame'>
